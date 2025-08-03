@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simuladores</title>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>Simuladores</h1>
+	</header>
+	<main>
+		<div class="container">
+			<div class="box1">
+				<h3>Simulador de Investimento</h3>
+				<table>
+					<colgroup>
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Referência</th>
+							<th>
+								<select id="selectRate">
+									<option value="">Selecione...</option>
+									<option value="cdi">CDI</option>
+									<option value="selic">Selic</option>
+									<option value="ipca">IPCA</option>
+									<option value="cdiplus">CDI+</option>
+									<option value="selicplus">Selic+</option>
+									<option value="ipcaplus">IPCA+</option>
+									<option value="prefixed">Prefixada</option>
+								</select>
+							</th>
+							<th id="rateType"></th>
+							<th>Taxa Real</th>
+							<th>Investimento</th>
+							<th>Vencimento</th>
+							<th>IOF</th>
+							<th>IRRF</th>
+							<th>IRRF Alíquota</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>ao ano</td>
+							<td id="rate"></td>
+							<td><input type="number" placeholder="digite a taxa"></td>
+							<td id="finalRate"></td>
+							<td><input type="number" placeholder="digite o capital"></td>
+							<td><input type="date"></td>
+							<td id="iofValue"></td>
+							<td id="irrfValue"></td>
+							<td id="irrfTaxRate"></td>
+						</tr>
+						<tr>
+							<td>ao mês</td>
+							<td id="monthlyFeeA"></td>
+							<td id="monthlyFeeB"></td>
+							<td id="monthlyFeeC"></td>
+							<th>Valor Bruto</th>
+							<th>Prazo</th>
+							<th>Rendimento</th>
+							<th>Descontos</th>
+							<th>Valor Líquido</th>
+						</tr>
+							<td>ao dia</td>
+							<td id="dailyFeeA"></td>
+							<td id="dailyFeeB"></td>
+							<td id="dailyFeeC"></td>
+							<td id="grossValue"></td>
+							<td id="yieldValue"></td>
+							<td id="term"></td>
+							<td id="discountsValue"></td>
+							<td id="netValue"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="box2">
+				<h3>Desconto Comercial</h3>
+				<table>
+					<colgroup>
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Valor Nominal</th>
+							<th>Vencimento</th>
+							<th>Taxa (% ao mês)</th>
+							<th>Tarifas</th>
+							<th>Prazo Médio</th>
+							<th>Juros</th>
+							<th>IOF Fixo</th>
+							<th>IOF Adicional</th>
+							<th>Valor Líquido</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="number" id="nominalValue" placeholder="digite o valor"></td>
+							<td><input type="date" id="maturity"></td>
+							<td><input type="number" id="discountRate" placeholder="digite a taxa"></td>
+							<td><input type="number" id="tariffs" placeholder="digite a tarifa"></td>
+							<td id="mediumTerm"></td>
+							<td id="interest"></td>
+							<td id="fixedIOF"></td>
+							<td id="additionalIOF"></td>
+							<td id="discountedAmount"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<div class="box3">
+				<h3>Conversão de Taxas</h3>
+				<table>
+					<colgroup>
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+						<col class="classA">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Referência</th>
+							<th>Taxa (%)</th>
+							<th>Ao dia</th>
+							<th>À semana</th>
+							<th>Ao mês</th>
+							<th>Ao bimestre</th>
+							<th>Ao trimestre</th>
+							<th>Ao semestre</th>
+							<th>Ao ano</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<select id="selectPeriod">
+									<option value="day">ao dia</option>
+									<option value="week">à semana</option>
+									<option value="month">ao mês</option>
+									<option value="bimester">ao bimestre</option>
+									<option value="quarter">ao trimestre</option>
+									<option value="semester">ao semestre</option>
+									<option value="year">ao ano</option>
+								</select>
+							</td>
+							<td><input type="number" id="taxInput" placeholder="digite a taxa"></td>
+							<td id="toDay"></td>
+							<td id="toWeek"></td>
+							<td id="toMonth"></td>
+							<td id="toBimester"></td>
+							<td id="toQuarter"></td>
+							<td id="toSemester"></td>
+							<td id="toYear"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</main>
+	<script type="module" src="main.js" defer></script>
+</body>
+</html>
+
+

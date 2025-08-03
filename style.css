@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Calibri, regular;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background: #465EFF;
+    color: #FCFC30;
+    padding: 10px 20px;
+    text-align: center;
+    height: 70px;
+}
+
+main {
+    margin: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+	color: #3333BD;
+}
+
+footer {
+    padding: 15px;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    height: 20px;
+}
+
+table th {
+    color: #ffffff;
+    background-color: #3333BD;
+}
+
+table th,
+table td {
+    border: 1px solid #3333BD;
+    padding: 0 8px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px;
+    height: 32px;
+	width: 150px;
+}
+
+table td {
+	font-size: 12px;
+}
+
+input,
+select {
+    padding: 0px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12px;
+	width: 110px;
+	height: 25px;
+	text-align: center;
+}
+
+.container {
+    display: flex; /* Torna o container flexível */
+	flex-direction: column; /* Organiza os elementos em colunas */
+    gap: 20px; /* Espaçamento entre as divs */
+    margin: 0; /* Remove a margem padrão */
+    padding: 10px; /* Remove o preenchimento padrão */
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: 100%; /* Ocupa toda a altura disponível */
+}
