@@ -4,15 +4,23 @@ export function limitDecimals(valor, casas = 2) {
 }
 
 export function convertPercentage(value) {
-	return Number(value) / 100;
+  if (!value) return 0;
+  const sanitized = value.replace(',', '.');
+  return Number(sanitized) / 100;
 }
 
 export function formatPercentage(value) {
-	if (value == null || isNaN(value)) value = 0;
-	return value.toLocaleString('pt-BR', {
-		minimumFractionDigits: 2,
-		maximumFractionDigits: 2
-	}) + '%';
+  if (value == null || isNaN(value)) value = 0;
+
+  const percentage = value * 100; // converte para % real pra exibir
+
+  // Se for menor que 0.01% (0.0001 decimal), mostra 4 casas, senão 2
+  const digits = Math.abs(percentage) < 0.01 && percentage !== 0 ? 4 : 2;
+
+  return percentage.toLocaleString('pt-BR', {
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
+  }) + '%';
 }
 
 export function formatCurrency(value) {
@@ -33,7 +41,7 @@ export function formatDate(date) {
 
 export function parseCurrency(value) {
 	if (!value) return 0;
-	const cleaned = value.replace(/\./g, '').replace(',', '.');
+	const cleaned = value.replace(/[^\d,]/g, '').replace(/\./g, '').replace(',', '.');
 	const parsed = parseFloat(cleaned);
 	return isNaN(parsed) ? 0 : parsed;
 }

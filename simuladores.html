@@ -49,7 +49,7 @@
 						<tr>
 							<td>ao ano</td>
 							<td id="rate"></td>
-							<td><input type="number" placeholder="digite a taxa"></td>
+							<td><input type="number" id="rateFlex" placeholder="digite a taxa"></td>
 							<td id="finalRate"></td>
 							<td><input type="number" placeholder="digite o capital"></td>
 							<td><input type="date"></td>
@@ -111,7 +111,7 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td><input type="number" id="nominalValue" placeholder="digite o valor"></td>
+							<td><input type="text" id="nominalValue" placeholder="digite o valor"></td>
 							<td><input type="date" id="maturity"></td>
 							<td><input type="number" id="discountRate" placeholder="digite a taxa"></td>
 							<td><input type="number" id="tariffs" placeholder="digite a tarifa"></td>
@@ -155,6 +155,7 @@
 						<tr>
 							<td>
 								<select id="selectPeriod">
+									<option value="">Selecione...</option>
 									<option value="day">ao dia</option>
 									<option value="week">à semana</option>
 									<option value="month">ao mês</option>
@@ -164,7 +165,7 @@
 									<option value="year">ao ano</option>
 								</select>
 							</td>
-							<td><input type="number" id="taxInput" placeholder="digite a taxa"></td>
+							<td><input type="text" id="taxInput" placeholder="digite a taxa"></td>
 							<td id="toDay"></td>
 							<td id="toWeek"></td>
 							<td id="toMonth"></td>
@@ -178,8 +179,9 @@
 			</div>
 		</div>
 	</main>
-	<script type="module" src="main.js" defer></script>
+	<!--<script type="module" src="./js/indicadores.js" defer></script>-->
+	<script type="module" src="./js/descontoComercial.js" defer></script>
+	<script type="module" src="./js/conversionTable.js" defer></script>
+	<!--<script type="module" src="./main.js" defer></script>-->
 </body>
 </html>
-
-
