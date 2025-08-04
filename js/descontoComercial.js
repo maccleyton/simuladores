@@ -28,7 +28,7 @@ function calcularPrazoEmDias(dataVencimento) {
  */
 function calcularIOF(valorDescontado, prazoDias) {
 	const iofFixo = valorDescontado * 0.0038;
-	const iofAdicional = valorDescontado * 0.000041 * prazoDias;
+	const iofAdicional = valorDescontado * 0.000082 * prazoDias;
 	return { iofFixo, iofAdicional };
 }
 
