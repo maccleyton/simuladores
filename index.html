@@ -73,8 +73,8 @@
 							<td id="dailyFeeB"></td>
 							<td id="dailyFeeC"></td>
 							<td id="grossValue"></td>
-							<td id="yieldValue"></td>
 							<td id="term"></td>
+							<td id="yieldValue"></td>
 							<td id="discountsValue"></td>
 							<td id="netValue"></td>
 						</tr>
@@ -140,8 +140,8 @@
 					</colgroup>
 					<thead>
 						<tr>
-							<th>Referência</th>
 							<th>Taxa (%)</th>
+							<th>Referência</th>
 							<th>Ao dia</th>
 							<th>À semana</th>
 							<th>Ao mês</th>
@@ -153,6 +153,7 @@
 					</thead>
 					<tbody>
 						<tr>
+							<td><input type="text" id="taxInput" placeholder="digite a taxa"></td>
 							<td>
 								<select id="selectPeriod">
 									<option value="">Selecione...</option>
@@ -165,7 +166,6 @@
 									<option value="year">ao ano</option>
 								</select>
 							</td>
-							<td><input type="text" id="taxInput" placeholder="digite a taxa"></td>
 							<td id="toDay"></td>
 							<td id="toWeek"></td>
 							<td id="toMonth"></td>
@@ -179,7 +179,7 @@
 			</div>
 		</div>
 	</main>
-	<!--<script type="module" src="./js/indicadores.js" defer></script>-->
+	<script type="module" src="./js/investmentTable.js" defer></script>
 	<script type="module" src="./js/descontoComercial.js" defer></script>
 	<script type="module" src="./js/conversionTable.js" defer></script>
 	<!--<script type="module" src="./main.js" defer></script>-->
